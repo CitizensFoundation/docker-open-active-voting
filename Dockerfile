@@ -2,7 +2,7 @@ FROM phusion/passenger-ruby21
 
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 0.2'
+RUN echo 'version 0.3'
 
 ENV HOME /root
 ENV RAILS_ENV production
