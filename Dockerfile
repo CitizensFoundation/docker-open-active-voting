@@ -17,10 +17,8 @@ ADD nginx.conf /etc/nginx/sites-enabled/oav_website.conf
 # Add the rails-env configuration file
 ADD rails-env.conf /etc/nginx/main.d/rails-env.conf
 
-WORKDIR /home/app/oav_website
-RUN chown -R app:app /home/app/oav_website
-RUN sudo -u app bundle install --deployment
-RUN sudo -u app rake assets:precompile
+RUN mkdir -p /etc/my_init.d
+ADD setup_app.sh /etc/my_init.d/setup_app.sh
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
