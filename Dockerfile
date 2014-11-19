@@ -5,6 +5,8 @@ MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 RUN echo 'version 0.4'
 
 ENV HOME /root
+ENV MC_1 127.0.0.1
+ENV MC_2 127.0.0.1
 
 CMD ["/sbin/my_init"]
 
