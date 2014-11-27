@@ -2,7 +2,7 @@ FROM phusion/passenger-ruby21
 
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 0.4'
+RUN echo 'version 0.5'
 
 ENV HOME /root
 ENV MC_1 127.0.0.1
@@ -13,6 +13,7 @@ CMD ["/sbin/my_init"]
 RUN apt-get update
 RUN apt-get install libyaml-dev
 
+RUN mkdir -p /var/log/nginx
 RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 ADD nginx.conf /etc/nginx/sites-enabled/oav_website.conf
