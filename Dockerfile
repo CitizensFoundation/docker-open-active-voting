@@ -1,8 +1,8 @@
-FROM phusion/passenger-ruby21
+FROM yrpri/passenger-ruby21:0.9.14
 
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 0.6'
+RUN echo 'version 0.7'
 
 ENV HOME /root
 ENV MC_1 127.0.0.1
