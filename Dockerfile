@@ -2,7 +2,7 @@ FROM yrpri/passenger-ruby21:0.9.14
 
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 0.7'
+RUN echo 'version 0.9'
 
 ENV HOME /root
 
@@ -22,4 +22,4 @@ ADD setup_app.sh /etc/my_init.d/setup_app.sh
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-EXPOSE 80
+EXPOSE 443
