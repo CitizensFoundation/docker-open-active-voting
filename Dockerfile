@@ -1,15 +1,15 @@
-FROM yrpri/passenger-ruby21:0.9.14
-
+#FROM yrpri/passenger-ruby21:0.9.14
+FROM phusion/passenger-ruby22
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 0.9'
+RUN echo 'version 1.1'
 
 ENV HOME /root
 
 CMD ["/sbin/my_init"]
 
 RUN apt-get update
-RUN apt-get install libyaml-dev
+RUN apt-get --assume-yes install libyaml-dev sudo
 
 RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
