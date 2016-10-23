@@ -4,7 +4,7 @@ server {
   
        large_client_header_buffers 4 32k;
   
-       server_name    ktest.betrireykjavik.is;
+       server_name    kosning.kopavogur.is;
        return         301 https://$server_name$request_uri;
 }
 
@@ -16,10 +16,12 @@ server {
   ssl on;
   ssl_certificate /etc/ssl/bundle.crt;
   ssl_certificate_key /etc/ssl/private.key;
-  
-  server_name ktest.betrireykjavik.is;
+ 
+  add_header P3P 'CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"'; 
+  server_name kosning.kopavogur.is;
   root /home/app/oav_website/public/build/bundled;
 
+  passenger_app_root /home/app/oav_website;
   passenger_enabled on;
   passenger_user app;
   passenger_ruby /usr/bin/ruby2.2;
