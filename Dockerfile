@@ -2,7 +2,7 @@
 FROM phusion/passenger-ruby22
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 5.9.17'
+RUN echo 'version 5.9.19'
 
 ENV HOME /root
 ENV APP_DB_HOST 10.10.11.101
