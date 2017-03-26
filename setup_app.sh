@@ -9,9 +9,9 @@ ls -l /usr/local/rvm/rubies/ruby-2.2.5/lib/ruby/site_ruby/2.2.0/rubygems/ssl_cer
 sudo -u app gem update --system 2.6.1
 sudo -u app gem install bundler
 
-rm -r /home/app/oav_website/vendor/bundle
+#rm -r /home/app/oav_website/vendor/bundle
 
 sudo -u app bundle install --deployment --verbose
-sudo -u app bundle exec rake db:migrate RAILS_ENV=production
+sudo -u app bundle exec rake db:create RAILS_ENV=production
 #sudo -u app bundle exec rake db:seed RAILS_ENV=production
 mkdir -p /var/log/nginx
