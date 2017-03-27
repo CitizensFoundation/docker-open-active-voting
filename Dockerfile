@@ -11,11 +11,11 @@ CMD ["/sbin/my_init"]
 
 RUN apt-get update
 RUN apt-get --assume-yes install libyaml-dev
-RUN apt-get --assume-yes install sudo
 RUN apt-get --assume-yes install build-essential patch
 RUN apt-get --assume-yes install ruby-dev zlib1g-dev liblzma-dev
 RUN apt-get --assume-yes install ca-certificates
 RUN apt-get --assume-yes install mysql-client
+RUN apt-get --assume-yes install sudo
 RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 ADD nginx.conf /etc/nginx/sites-enabled/oav_website.conf
