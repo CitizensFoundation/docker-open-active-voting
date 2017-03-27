@@ -10,7 +10,8 @@ ENV APP_DB_HOST 10.10.11.101
 CMD ["/sbin/my_init"]
 
 RUN apt-get update
-RUN apt-get --assume-yes install libyaml-dev sudo
+RUN apt-get --assume-yes install libyaml-dev
+RUN apt-get --assume-yes install sudo
 RUN apt-get --assume-yes install build-essential patch
 RUN apt-get --assume-yes install ruby-dev zlib1g-dev liblzma-dev
 RUN apt-get --assume-yes install ca-certificates
