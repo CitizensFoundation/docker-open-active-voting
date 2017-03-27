@@ -2,13 +2,14 @@
 FROM phusion/passenger-ruby22
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 5.10.4'
+RUN echo 'version 5.10.5'
 
 ENV HOME /root
 ENV APP_DB_HOST 10.10.11.101
 
 CMD ["/sbin/my_init"]
 
+RUN apt-get clean
 RUN apt-get update
 RUN apt-get --assume-yes install libyaml-dev
 RUN apt-get --assume-yes install build-essential patch
