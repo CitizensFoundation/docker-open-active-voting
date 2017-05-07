@@ -4,6 +4,8 @@ server {
   
   large_client_header_buffers 4 32k;
 
+  client_max_body_size 256M;
+
   server_name kosning.kopavogur.is;
   root /home/app/oav_website/public;
 
