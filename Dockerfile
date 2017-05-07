@@ -2,19 +2,21 @@
 FROM phusion/passenger-ruby22
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 5.10.1'
+RUN echo 'version 5.10.5'
 
 ENV HOME /root
 ENV APP_DB_HOST 10.10.11.101
 
 CMD ["/sbin/my_init"]
 
+RUN apt-get clean
 RUN apt-get update
-RUN apt-get --assume-yes install libyaml-dev sudo
+RUN apt-get --assume-yes install libyaml-dev
 RUN apt-get --assume-yes install build-essential patch
 RUN apt-get --assume-yes install ruby-dev zlib1g-dev liblzma-dev
 RUN apt-get --assume-yes install ca-certificates
 RUN apt-get --assume-yes install mysql-client
+RUN apt-get --assume-yes install sudo
 RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 ADD nginx.conf /etc/nginx/sites-enabled/oav_website.conf
