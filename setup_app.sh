@@ -11,3 +11,6 @@ sudo -u app bundle install --deployment --verbose
 sudo -u app bundle exec rake db:migrate RAILS_ENV=production
 #sudo -u app bundle exec rake db:seed RAILS_ENV=production
 mkdir -p /var/log/nginx
+
+# If you are running behind a proxy you will need to add proxy_http and proxy_https veriables to all the sude ruby calls
+# Fe. sudo http_proxy="http://myproxy.net/" https_proxy="http://myproxy.net" -u app gem update
