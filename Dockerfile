@@ -1,12 +1,12 @@
 #FROM yrpri/passenger-ruby21:0.9.14
-FROM phusion/passenger-ruby22
+FROM phusion/passenger-ruby24
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 5.10.6'
+RUN echo 'version 5.4.5'
 
 ENV HOME /root
 ENV APP_DB_HOST 10.10.11.101
-
+ENV DISABLE_DATABASE_ENVIRONMENT_CHECK 1
 CMD ["/sbin/my_init"]
 
 RUN apt-get clean
