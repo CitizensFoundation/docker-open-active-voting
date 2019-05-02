@@ -1,8 +1,8 @@
 #FROM yrpri/passenger-ruby21:0.9.14
-FROM phusion/passenger-ruby22
+FROM phusion/passenger-ruby24
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
-RUN echo 'version 5.9.23'
+RUN echo 'version 5.10.23'
 
 ENV HOME /root
 ENV APP_DB_HOST 10.10.11.101
