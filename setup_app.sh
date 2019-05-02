@@ -5,7 +5,7 @@ cd /home/app/oav_website
 sudo -u app gem update
 sudo -u app gem install bundler
 
-rm -r /home/app/oav_website/vendor/bundle
+#rm -r /home/app/oav_website/vendor/bundle
 
 sudo -u app bundle install --deployment --verbose
 sudo -u app bundle exec rake db:migrate RAILS_ENV=production
