@@ -1,5 +1,5 @@
 #FROM yrpri/passenger-ruby21:0.9.14
-FROM phusion/passenger-ruby27:1.0.16
+FROM phusion/passenger-ruby27:2.0.1
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
 RUN echo 'version 5.10.23'
