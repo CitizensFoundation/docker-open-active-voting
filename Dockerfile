@@ -1,5 +1,5 @@
 #FROM yrpri/passenger-ruby21:0.9.14
-FROM phusion/passenger-ruby27:2.0.1
+FROM phusion/passenger-ruby26
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
 RUN echo 'version 5.4.5'
@@ -13,7 +13,7 @@ RUN apt-get clean
 RUN apt-get update
 RUN apt-get --assume-yes install libyaml-dev
 RUN apt-get --assume-yes install build-essential patch
-RUN apt-get --assume-yes install zlib1g-dev liblzma-dev
+RUN apt-get --assume-yes install ruby-dev zlib1g-dev liblzma-dev
 RUN apt-get --assume-yes install ca-certificates
 RUN apt-get --assume-yes install mysql-client
 RUN apt-get --assume-yes install sudo
