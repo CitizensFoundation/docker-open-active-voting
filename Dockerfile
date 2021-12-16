@@ -1,4 +1,3 @@
-#FROM yrpri/passenger-ruby21:0.9.14
 FROM phusion/passenger-ruby27:2.1.0
 MAINTAINER Robert Vidar Bjarnason <robert@citizens.is>
 
